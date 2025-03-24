@@ -29,3 +29,7 @@ with open("startup.sh", "w") as f:
 # GCP Autoscaling Command
 command = f"""gcloud beta compute instance-groups managed create instance-group-2 --project=assign2-452517 --base-instance-name=instance-group-2 --template=projects/assign2-452517/regions/us-west1/instanceTemplates/assign3 --size=1 --zone=us-west1-b --list-managed-instances-results=pageless && gcloud beta compute instance-groups managed set-autoscaling instance-group-2 --project=assign2-452517 --zone=us-west1-b --mode=on --min-num-replicas=1 --max-num-replicas=3 --target-cpu-utilization=0.75 --cpu-utilization-predictive-method=none --cool-down-period=60
 """
+
+# Execute the GCP deployment
+os.system(command)
+print("[INFO] GCP VM Deployment Triggered for Pravin!")
