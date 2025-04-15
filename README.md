@@ -1,4 +1,4 @@
-# TransCloud Travel Optimizer.
+# Trans-Cloud Travel Optimizer.
 
 Step 1: Create a virtual machine
 Step 2: Run that machine
